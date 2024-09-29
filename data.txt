@@ -1,0 +1,139 @@
+{
+  "name": "bilgi_zorunlulugu_degerlendirme",
+  "description": "Bir soruyu cevaplamak için gerekli ifadeleri belirleyin",
+  "keywords": ["mantıksal akıl yürütme", "cebir", "aritmetik", "okuduğunu anlama", "olasılıksal akıl yürütme", "sağduyu", "parçalara ayırma", "çoktan seçmeli", "çok adımlı", "yeterli bilgi"],
+  "preferred_score": "multiple_choice_grade",
+  "example_input_prefix": "\nSoru: ",
+  "metrics": [
+      "multiple_choice_grade"
+  ],
+  "append_choices_to_input": true,
+  "examples": [
+    {
+        "input": "Ayşe fil mi yoksa zebra mı daha çok sever? Aşağıdaki ifadelerden hangisi/hangileri önceki soruyu cevaplamak için yeterlidir? \n1. Fil, Ayşe'nin en sevdiği hayvandır. \n2. Zebra, Ayşe'nin en az sevdiği hayvandır.",
+        "target_scores": {
+            "Sadece 1. ifade yeterlidir, 2. ifade yetersizdir": 0,
+            "Sadece 2. ifade yeterlidir, 1. ifade yetersizdir": 0,
+            "1. veya 2. ifadelerden herhangi biri yeterlidir": 1,
+            "1. ve 2. ifadeler birlikte alındığında yeterlidir": 0,
+            "Ne 1. ne de 2. ifadeler ne de birlikte alındıklarında yeterlidir": 0
+        }
+    },
+    {
+        "input": "Bir sınıftaki tüm öğrenciler bir sınava girdi. Sınıfta kaç öğrenci var? Aşağıdaki ifadelerden hangisi/hangileri önceki soruyu cevaplamak için yeterlidir? \n1. Beş öğrenci başarısız oldu. \n2. Bir öğrenci sıralamada en üstten 29., en alttan ise 16. sıradaydı.",
+        "target_scores": {
+            "Sadece 1. ifade yeterlidir, 2. ifade yetersizdir": 0,
+            "Sadece 2. ifade yeterlidir, 1. ifade yetersizdir": 1,
+            "1. veya 2. ifadelerden herhangi biri yeterlidir": 0,
+            "1. ve 2. ifadeler birlikte alındığında yeterlidir": 0,
+            "Ne 1. ne de 2. ifadeler ne de birlikte alındıklarında yeterlidir": 0
+        }
+    },
+    {
+        "input": "Samet hangi yöne bakıyor? Aşağıdaki ifadelerden hangisi/hangileri önceki soruyu cevaplamak için yeterlidir? \n1. Samet Kuzeye bakmıyor. \n2. Samet güneşe bakıyor.",
+        "target_scores": {
+            "Sadece 1. ifade yeterlidir, 2. ifade yetersizdir": 0,
+            "Sadece 2. ifade yeterlidir, 1. ifade yetersizdir": 0,
+            "1. veya 2. ifadelerden herhangi biri yeterlidir": 0,
+            "1. ve 2. ifadeler birlikte alındığında yeterlidir": 0,
+            "Ne 1. ne de 2. ifadeler ne de birlikte alındıklarında yeterlidir": 1
+        }
+    },
+    {
+        "input": "Sepette sadece mavi toplar var mı? Aşağıdaki ifadelerden hangisi/hangileri önceki soruyu cevaplamak için yeterlidir? \n1. Sepette kırmızı toplar yok. \n2. Sepetteki en küçük top yeşil.",
+        "target_scores": {
+            "Sadece 1. ifade yeterlidir, 2. ifade yetersizdir": 0,
+            "Sadece 2. ifade yeterlidir, 1. ifade yetersizdir": 1,
+            "1. veya 2. ifadelerden herhangi biri yeterlidir": 0,
+            "1. ve 2. ifadeler birlikte alındığında yeterlidir": 0,
+            "Ne 1. ne de 2. ifadeler ne de birlikte alındıklarında yeterlidir": 0
+        }
+    },
+    {
+        "input": "Ayşe havuç sever mi? Aşağıdaki ifadelerden hangisi/hangileri önceki soruyu cevaplamak için yeterlidir? \n1. Ayşe sebzelerden nefret eder. \n2. Ayşe, pırasadan daha çok havuç tercih eder.",
+        "target_scores": {
+            "Sadece 1. ifade yeterlidir, 2. ifade yetersizdir": 1,
+            "Sadece 2. ifade yeterlidir, 1. ifade yetersizdir": 0,
+            "1. veya 2. ifadelerden herhangi biri yeterlidir": 0,
+            "1. ve 2. ifadeler birlikte alındığında yeterlidir": 0,
+            "Ne 1. ne de 2. ifadeler ne de birlikte alındıklarında yeterlidir": 0
+        }
+    },
+    {
+        "input": "B olayının gerçekleşme olasılığı nedir? Aşağıdaki ifadelerden hangisi/hangileri önceki soruyu cevaplamak için yeterlidir? \n1. A olayının olasılığı 0.55. \n2. A veya B olaylarının ya da her ikisinin birden gerçekleşme olasılığı 0.65.",
+        "target_scores": {
+            "Sadece 1. ifade yeterlidir, 2. ifade yetersizdir": 0,
+            "Sadece 2. ifade yeterlidir, 1. ifade yetersizdir": 0,
+            "1. veya 2. ifadelerden herhangi biri yeterlidir": 0,
+            "1. ve 2. ifadeler birlikte alındığında yeterlidir": 0,
+            "Ne 1. ne de 2. ifadeler ne de birlikte alındıklarında yeterlidir": 1
+        }
+    },
+    {
+        "input": "İnşaat müteahhidi özel bir lisansa ihtiyaç duyacak mı? Aşağıdaki ifadelerden hangisi/hangileri önceki soruyu cevaplamak için yeterlidir? \n1. 20 kattan fazla olan tüm binalar için özel bir lisans gerekir. \n2. İnşaat müteahhidi 30 katlı bir bina yapmak istiyor.",
+        "target_scores": {
+            "Sadece 1. ifade yeterlidir, 2. ifade yetersizdir": 0,
+            "Sadece 2. ifade yeterlidir, 1. ifade yetersizdir": 0,
+            "1. veya 2. ifadelerden herhangi biri yeterlidir": 0,
+            "1. ve 2. ifadeler birlikte alındığında yeterlidir": 1,
+            "Ne 1. ne de 2. ifadeler ne de birlikte alındıklarında yeterlidir": 0
+        }
+    },
+    {
+        "input": "Bir duvarı 10 işçi 6 saatte örer. Duvarı 5 tuğla döşeme makinesi kaç saatte örer? Aşağıdaki ifadelerden hangisi/hangileri önceki soruyu cevaplamak için yeterlidir? \n1. 5 tuğla döşeme makinesi 5 işçiyle çalışırsa duvar 7,5 saatte örülür. \n2. Tuğla döşeme makineleri işçilerden iki kat daha hızlı çalışır.",
+        "target_scores": {
+            "Sadece 1. ifade yeterlidir, 2. ifade yetersizdir": 0,
+            "Sadece 2. ifade yeterlidir, 1. ifade yetersizdir": 0,
+            "1. veya 2. ifadelerden herhangi biri yeterlidir": 1,
+            "1. ve 2. ifadeler birlikte alındığında yeterlidir": 0,
+            "Ne 1. ne de 2. ifadeler ne de birlikte alındıklarında yeterlidir": 0
+        }
+    },
+
+    {
+      "input": "Bir öğrenci matematik ve fen derslerinden sınavlara girecek. Her iki dersten de geçmek için en az 50 puan alması gerekiyor. Öğrenci her iki dersten de geçti mi? \n1. Matematikten 70 puan aldı. \n2. Fen dersinden en az 50 puan aldı.",
+      "target_scores": {
+        "Yalnızca 1. ifade yeterlidir": 0,
+        "Yalnızca 2. ifade yeterlidir": 0,
+        "1. ve 2. ifadeler birlikte yeterlidir": 1,
+        "İfadeler yetersizdir": 0
+      }
+    },
+    {
+      "input": "Bir kitaplıkta her rafta eşit sayıda kitap var. Tüm kitaplığı doldurmak için en az 120 kitaba ihtiyaç var. Kitaplık tamamen dolu mu? \n1. Kitaplıkta 5 raf var. \n2. Her rafta 24 kitap var.",
+      "target_scores": {
+        "Yalnızca 1. ifade yeterlidir": 0,
+        "Yalnızca 2. ifade yeterlidir": 0,
+        "1. ve 2. ifadeler birlikte yeterlidir": 1,
+        "İfadeler yetersizdir": 0
+      }
+    },
+    {
+      "input": "Bir kutuda farklı renklerde kalemler var. Kutuda yalnızca kırmızı ve mavi kalemler mi var? \n1. Kutuda yeşil bir kalem yok. \n2. Kutuda en az bir mavi kalem var.",
+      "target_scores": {
+        "Yalnızca 1. ifade yeterlidir": 0,
+        "Yalnızca 2. ifade yeterlidir": 0,
+        "1. ve 2. ifadeler birlikte yeterlidir": 0,
+        "İfadeler yetersizdir": 1
+      }
+    },
+    {
+      "input": "Bir araba saatte 60 km hızla giderse, 3 saatte 180 km yol alır. Araba 4 saatte kaç km yol alır? \n1. Arabanın hızı sabittir. \n2. Araba saatte 60 km'den daha hızlı gidemez.",
+      "target_scores": {
+        "Yalnızca 1. ifade yeterlidir": 1,
+        "Yalnızca 2. ifade yeterlidir": 0,
+        "1. ve 2. ifadeler birlikte yeterlidir": 0,
+        "İfadeler yetersizdir": 0
+      }
+    },
+    {
+      "input": "Bir çiftlikteki tavuk ve ineklerin toplam ayak sayısı 14. Çiftlikte toplam kaç tavuk ve inek var? \n1. Tavukların iki ayağı var. \n2. İneklerin dört ayağı var.",
+      "target_scores": {
+        "Yalnızca 1. ifade yeterlidir": 0,
+        "Yalnızca 2. ifade yeterlidir": 0,
+        "1. ve 2. ifadeler birlikte yeterlidir": 0,
+        "İfadeler yetersizdir": 1
+      }
+    }
+  ]
+}
